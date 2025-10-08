@@ -65,7 +65,7 @@ coverage/
 .nyc_output
 
 # Dependency directories
-# node_modules/ - keeping this for now as it's already committed
+node_modules/
 
 # Optional npm cache directory
 .npm
