@@ -1,0 +1,33 @@
+{
+  "name": "selenium-chrome-97-test",
+  "version": "1.0.0",
+  "description": "Test Selenium Chrome 97 container access to localhost:3000",
+  "main": "selenium_test.js",
+  "scripts": {
+    "test": "node selenium_test.js",
+    "test:python": "python3 selenium_test.py",
+    "test:connectivity": "python3 test_connectivity.py",
+    "test:curl": "./test_curl.sh",
+    "connect": "python3 connect_to_frontend.py",
+    "connect:3000": "python3 connect_to_frontend.py 3000",
+    "connect:4200": "python3 connect_to_frontend.py 4200",
+    "connect:5173": "python3 connect_to_frontend.py 5173",
+    "connect:8080": "python3 connect_to_frontend.py 8080",
+    "start:container": "docker-compose up -d",
+    "stop:container": "docker-compose down",
+    "logs": "docker-compose logs -f selenium-chrome",
+    "status": "docker-compose ps"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.15.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "selenium",
+    "chrome",
+    "docker",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT"
+}

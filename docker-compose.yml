@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  selenium-chrome:
+    image: selenium/standalone-chrome:97.0
+    platform: linux/amd64
+    container_name: selenium-chrome-97
+    ports:
+      - "4444:4444"  # WebDriver port
+      - "7900:7900"  # noVNC desktop
+    environment:
+      - SE_VNC_NO_PASSWORD=1
+      - SE_SCREEN_WIDTH=1920
+      - SE_SCREEN_HEIGHT=1080
+      - SE_SCREEN_DPR=1
+      - VNC_NO_PASSWORD=1
+      - SE_NODE_SESSION_TIMEOUT=300
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    shm_size: 2gb
+    volumes:
+      - /dev/shm:/dev/shm
